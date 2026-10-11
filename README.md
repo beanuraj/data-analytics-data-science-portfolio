@@ -1,29 +1,29 @@
 # Data Analytics & Data Science Portfolio
 
-Advanced, business-focused projects using public or synthetic data. The portfolio demonstrates KPI design, SQL, Python, forecasting, machine-learning evaluation, testing, and decision-oriented communication.
+Business-focused portfolio demonstrating SQL, Python, KPI design, forecasting evaluation, and decision-oriented analytics using synthetic datasets. The projects are designed to be reproducible without exposing employer or customer data.
 
 ## Projects
-- **01 — Last-Mile Delivery Intelligence:** delivery service levels, failures, cost, and operational drivers.
-- **02 — Retail Demand & Inventory Optimization:** forecast accuracy, bias, and inventory risk.
-- **03 — Financial Crime & Alert Optimization:** model thresholds, false-positive workload, and missed-case trade-offs.
 
-## Principles
-- No confidential employer data, code, dashboards, documents, or internal metrics.
-- Synthetic data is explicitly labelled and never presented as real-world evidence.
-- Public datasets will be used only after checking terms and documenting their source.
-- Metrics and model results will be generated and tested before being quoted in a CV.
-- Third-party code and data will be attributed according to their licenses.
+| Project | Business problem | Skills demonstrated |
+|---|---|---|
+| [01 — Last-Mile Delivery Intelligence](project-01-last-mile-analytics/README.md) | Delivery reliability, delay, and cost by region/partner | Python, pandas, SQL, data validation, KPI analysis |
+| [02 — Retail Demand & Inventory Optimization](project-02-retail-forecasting/README.md) | Compare simple demand forecasting baselines and measure bias | Python, time-aware validation, WMAPE, forecast bias |
+| [03 — Financial Crime Alert Optimization](project-03-financial-crime-analytics/README.md) | Quantify alert threshold, workload, and missed-positive trade-offs | Python, classification metrics, threshold/cost analysis |
 
 ## Quick start
-Python 3.10+ recommended.
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-pytest
 python project-01-last-mile-analytics/src/generate_data.py
 python project-01-last-mile-analytics/src/analyze_deliveries.py
+python project-02-retail-forecasting/src/forecast_demo.py
+python project-03-financial-crime-analytics/src/threshold_demo.py
+pytest -q
 ```
 
-See each project README for scope, assumptions, and commands. This is an initial scaffold; run it locally and verify results before publication.
+Each project documents its assumptions, metric definitions, and limitations. Synthetic outputs are illustrative; they are not employer results or evidence of production impact.
+
+## About
+Data analytics and data science practitioner focused on translating business questions into measurable KPIs, robust analysis, and actionable recommendations.

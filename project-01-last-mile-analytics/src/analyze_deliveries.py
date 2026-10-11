@@ -53,5 +53,15 @@ if __name__ == "__main__":
     (REPORT_DIR / "overall_metrics.json").write_text(json.dumps(summarize(data), indent=2))
     grouped_summary(data, "region").to_csv(REPORT_DIR / "by_region.csv", index=False)
     grouped_summary(data, "delivery_partner").to_csv(REPORT_DIR / "by_partner.csv", index=False)
+    # Diagnostic table: prioritize segments with the largest observed failure rate.
+    by_region = grouped_summary(data, "region")
+    by_region.sort_values(["failed_delivery_rate", "orders"], ascending=[False, False]).to_csv(
+        REPORT_DIR / "region_risk_prioritization.csv", index=False
+    )
+    by_partner = grouped_summary(data, "delivery_partner")
+    by_partner.sort_values(["failed_delivery_rate", "average_delay_minutes_among_delivered"],
+                           ascending=[False, False]).to_csv(
+        REPORT_DIR / "partner_risk_prioritization.csv", index=False
+    )
     print(json.dumps(summarize(data), indent=2))
     print(f"Reports saved under {REPORT_DIR}")

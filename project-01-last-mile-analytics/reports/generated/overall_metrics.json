@@ -1,0 +1,11 @@
+{
+  "orders": 5000,
+  "delivered_orders": 4717,
+  "failed_orders": 283,
+  "delivery_success_rate": 0.9434,
+  "failed_delivery_rate": 0.0566,
+  "on_time_rate_among_delivered": 0.3897,
+  "average_delay_minutes_among_delivered": 6.04,
+  "cost_per_order": 48.74,
+  "cost_per_successful_delivery": 51.66
+}

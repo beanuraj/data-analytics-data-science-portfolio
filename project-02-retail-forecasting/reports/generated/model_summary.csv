@@ -1,0 +1,3 @@
+model,mean_sku_store_wmape,mean_sku_store_bias,sku_store_groups
+four_week_mean,0.1634504724799787,-0.017093655278503483,12.0
+last_week_naive,0.22869039934200397,-0.006060539855940131,12.0

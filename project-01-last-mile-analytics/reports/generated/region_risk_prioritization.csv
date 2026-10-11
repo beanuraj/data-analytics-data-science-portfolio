@@ -1,0 +1,5 @@
+region,orders,delivered_orders,failed_orders,delivery_success_rate,failed_delivery_rate,on_time_rate_among_delivered,average_delay_minutes_among_delivered,cost_per_order,cost_per_successful_delivery
+East,980,916,64,0.9347,0.0653,0.381,6.3,49.12,52.55
+West,1324,1251,73,0.9449,0.0551,0.3973,6.16,48.87,51.73
+North,1303,1232,71,0.9455,0.0545,0.3872,5.95,48.76,51.57
+South,1393,1318,75,0.9462,0.0538,0.3907,5.84,48.32,51.07

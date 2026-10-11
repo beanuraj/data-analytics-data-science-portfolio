@@ -1,37 +1,33 @@
 # Project 01 — Last-Mile Delivery Intelligence
 
-## Business question
-Which regions, delivery partners, and operating conditions are associated with late or failed deliveries and higher cost per successful delivery?
+## Business problem
+A delivery operation needs to improve reliability without losing sight of cost. This project measures delivery success, on-time performance, delay severity, and delivery cost by region and partner.
 
-## Scope
-This implementation creates a reproducible **synthetic** delivery dataset and calculates operational KPIs. It is not real company data and does not claim real-world savings.
+## Run it
+From the repository root:
 
-## Metrics
-- Delivery success rate = delivered orders / all orders.
-- Failed delivery rate = failed orders / all orders.
-- On-time rate among delivered orders.
-- Average delay minutes among delivered orders.
-- Cost per order and cost per successful delivery.
-
-Definitions and assumptions are in `docs/metric_definitions.md`. SQL equivalents are in `sql/delivery_kpis.sql`.
-
-## Run from the repository root
 ```bash
 pip install -r requirements.txt
 python project-01-last-mile-analytics/src/generate_data.py
 python project-01-last-mile-analytics/src/analyze_deliveries.py
-pytest
 ```
 
-Generated data and reports are ignored by Git by default.
+The generator creates 5,000 deterministic synthetic orders. Reports are written to `reports/generated/`: overall KPIs, region comparison, partner comparison, and a prioritized diagnostic summary. SQL equivalents are in `sql/delivery_kpis.sql`.
 
-## Planned enhancements
-1. Add deeper data-quality and schema checks.
-2. Analyze performance by weekday, region, partner, and order volume.
-3. Test whether segment differences are statistically meaningful.
-4. Build a dashboard with metric glossary and drill-through.
-5. Add cost scenarios with explicit assumptions.
-6. Consider a public real-world dataset after checking its license and suitability.
+## Questions answered
+- What share of orders are successfully delivered and on time?
+- Which regions and delivery partners have the highest delay and failure risk?
+- What is the cost per order and per successful delivery?
+- Which segments should operations investigate first?
 
-## Attribution
-This scaffold is newly authored for this portfolio. No employer code or internal data is included. Public datasets or third-party components added later must be documented with their sources and licenses.
+## Method and caveats
+- A failed delivery is not counted as on-time; on-time rate uses delivered orders as its denominator.
+- Cost per successful delivery uses total delivery cost divided by successful deliveries, so failed-order costs remain visible.
+- Data is synthetic and designed to demonstrate workflow and analysis, not to represent actual company performance. Segment differences are descriptive, not causal.
+
+## Deliverables
+- Reproducible synthetic data generation
+- Data validation and KPI calculations
+- Segment-level CSV outputs and JSON summary
+- SQL KPI query and metric definitions
+- Unit tests
