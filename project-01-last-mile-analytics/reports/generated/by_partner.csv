@@ -1,4 +1,4 @@
-delivery_partner,orders,delivered_orders,failed_orders,delivery_success_rate,failed_delivery_rate,on_time_rate_among_delivered,average_delay_minutes_among_delivered,cost_per_order,cost_per_successful_delivery
-Partner_A,2024,1913,111,0.9452,0.0548,0.4699,4.56,48.92,51.75
-Partner_B,1722,1643,79,0.9541,0.0459,0.378,6.0,48.82,51.17
-Partner_C,1254,1161,93,0.9258,0.0742,0.2739,8.54,48.34,52.21
+delivery_partner,orders,delivered_orders,failed_orders,delivery_success_rate,failed_delivery_rate,on_time_rate_among_delivered,average_delay_minutes_among_delivered,p90_delay_minutes_among_delivered,cost_per_order,cost_per_successful_delivery,total_delivery_cost
+Partner_A,2024,1913,111,0.9452,0.0548,0.4699,4.56,14.0,48.92,51.75,99005.02
+Partner_B,1722,1643,79,0.9541,0.0459,0.378,6.0,16.0,48.82,51.17,84065.18
+Partner_C,1254,1161,93,0.9258,0.0742,0.2739,8.54,20.0,48.34,52.21,60614.76

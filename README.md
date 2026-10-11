@@ -1,13 +1,13 @@
 # Data Analytics & Data Science Portfolio
 
-Business-focused portfolio demonstrating SQL, Python, KPI design, forecasting evaluation, and decision-oriented analytics using synthetic datasets. The projects are designed to be reproducible without exposing employer or customer data.
+Business-focused portfolio demonstrating SQL, Python, KPI design, forecasting evaluation, and decision-oriented analytics using synthetic datasets. No employer data, proprietary code, or confidential business results are included.
 
 ## Projects
 
 | Project | Business problem | Skills demonstrated |
 |---|---|---|
-| [01 — Last-Mile Delivery Intelligence](project-01-last-mile-analytics/README.md) | Delivery reliability, delay, and cost by region/partner | Python, pandas, SQL, data validation, KPI analysis |
-| [02 — Retail Demand & Inventory Optimization](project-02-retail-forecasting/README.md) | Compare simple demand forecasting baselines and measure bias | Python, time-aware validation, WMAPE, forecast bias |
+| [01 — Last-Mile Delivery Intelligence](project-01-last-mile-analytics/README.md) | Delivery reliability, delay severity, and cost by region/partner | Python, pandas, SQL, data validation, visual reporting, business recommendations |
+| [02 — Retail Demand & Inventory Optimization](project-02-retail-forecasting/README.md) | Compare demand forecasting baselines and measure bias | Python, time-aware validation, WMAPE, forecast bias |
 | [03 — Financial Crime Alert Optimization](project-03-financial-crime-analytics/README.md) | Quantify alert threshold, workload, and missed-positive trade-offs | Python, classification metrics, threshold/cost analysis |
 
 ## Quick start
@@ -23,7 +23,7 @@ python project-03-financial-crime-analytics/src/threshold_demo.py
 pytest -q
 ```
 
-Each project documents its assumptions, metric definitions, and limitations. Synthetic outputs are illustrative; they are not employer results or evidence of production impact.
+Each project documents assumptions, metric definitions, and limitations. Synthetic outputs are illustrative and do not represent any employer's actual performance.
 
 ## About
 Data analytics and data science practitioner focused on translating business questions into measurable KPIs, robust analysis, and actionable recommendations.

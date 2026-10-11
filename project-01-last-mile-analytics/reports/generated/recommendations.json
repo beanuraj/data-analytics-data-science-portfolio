@@ -1,0 +1,26 @@
+[
+  {
+    "priority": 1,
+    "area": "Delivery failures",
+    "finding": "East has the highest observed failure rate (6.5%) across 980 orders.",
+    "recommended_action": "Review failed-order reasons and operational conditions in this region; compare like-for-like distance and order-volume segments.",
+    "success_metric": "Failed delivery rate",
+    "caveat": "Descriptive signal only; validate sample size and mix before changing operations."
+  },
+  {
+    "priority": 2,
+    "area": "Partner performance",
+    "finding": "Partner_C has the highest observed failure rate (7.4%) among partners.",
+    "recommended_action": "Audit handoff, capacity, and exception processes with the partner; compare performance after controlling for distance and region.",
+    "success_metric": "Failure rate and on-time rate",
+    "caveat": "Partner-level differences may reflect different delivery mixes and do not prove causation."
+  },
+  {
+    "priority": 3,
+    "area": "Customer promise",
+    "finding": "The overall on-time rate among delivered orders is 39.0%; the 90th percentile of positive delay is 17.0 minutes.",
+    "recommended_action": "Inspect high-delay routes and time windows, then test revised promise buffers only for consistently high-variance segments.",
+    "success_metric": "On-time rate and 90th-percentile delay",
+    "caveat": "Test changes with a defined comparison period and monitor cost and cancellations as guardrails."
+  }
+]

@@ -1,5 +1,5 @@
 -- Assumes a deliveries table matching docs/data_dictionary.md.
--- Amazon Redshift-compatible SQL.
+-- ANSI-style SQL compatible with common analytical warehouses.
 
 SELECT
     COUNT(*) AS total_orders,
